@@ -44,7 +44,10 @@ This template consolidates maintainership patterns proven in the following repos
 - GitHub Actions lint (`actionlint`).
 - Shell script lint (`shellcheck`).
 - Pre-commit hooks to mirror CI checks locally.
+- Shared verified `actionlint` release-binary helpers so CI and pre-commit use
+  the same pinned version without relying on a local Go toolchain.
 - `AGENTS.md` operational guidance for repository-local agent behavior.
+- `CLAUDE.md` shim support for Claude Code without duplicating shared rules.
 - `docs/AGENTS.example.md` as a copy/adapt baseline for downstream repos.
 - Bootstrap ruleset payload generation covered by a dedicated smoke script.
 - Required-check workflows use workflow-level concurrency so superseded runs are

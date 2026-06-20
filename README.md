@@ -1,20 +1,22 @@
-# codex-github-best-practices
+# agentic-github-governance
 
-[![License](https://img.shields.io/github/license/M-Gage-Plott42/codex-github-best-practices?label=License)](LICENSE)
-[![ruff](https://github.com/M-Gage-Plott42/codex-github-best-practices/actions/workflows/lint-python.yml/badge.svg?branch=main)](https://github.com/M-Gage-Plott42/codex-github-best-practices/actions/workflows/lint-python.yml)
-[![markdownlint](https://github.com/M-Gage-Plott42/codex-github-best-practices/actions/workflows/lint-markdown.yml/badge.svg?branch=main)](https://github.com/M-Gage-Plott42/codex-github-best-practices/actions/workflows/lint-markdown.yml)
-[![yamllint](https://github.com/M-Gage-Plott42/codex-github-best-practices/actions/workflows/lint-yaml.yml/badge.svg?branch=main)](https://github.com/M-Gage-Plott42/codex-github-best-practices/actions/workflows/lint-yaml.yml)
-[![actionlint](https://github.com/M-Gage-Plott42/codex-github-best-practices/actions/workflows/lint-actions.yml/badge.svg?branch=main)](https://github.com/M-Gage-Plott42/codex-github-best-practices/actions/workflows/lint-actions.yml)
-[![shellcheck](https://github.com/M-Gage-Plott42/codex-github-best-practices/actions/workflows/lint-shell.yml/badge.svg?branch=main)](https://github.com/M-Gage-Plott42/codex-github-best-practices/actions/workflows/lint-shell.yml)
-[![CodeQL](https://github.com/M-Gage-Plott42/codex-github-best-practices/actions/workflows/codeql.yml/badge.svg?branch=main)](https://github.com/M-Gage-Plott42/codex-github-best-practices/actions/workflows/codeql.yml)
+[![License](https://img.shields.io/github/license/M-Gage-Plott42/agentic-github-governance?label=License)](LICENSE)
+[![ruff](https://github.com/M-Gage-Plott42/agentic-github-governance/actions/workflows/lint-python.yml/badge.svg?branch=main)](https://github.com/M-Gage-Plott42/agentic-github-governance/actions/workflows/lint-python.yml)
+[![markdownlint](https://github.com/M-Gage-Plott42/agentic-github-governance/actions/workflows/lint-markdown.yml/badge.svg?branch=main)](https://github.com/M-Gage-Plott42/agentic-github-governance/actions/workflows/lint-markdown.yml)
+[![yamllint](https://github.com/M-Gage-Plott42/agentic-github-governance/actions/workflows/lint-yaml.yml/badge.svg?branch=main)](https://github.com/M-Gage-Plott42/agentic-github-governance/actions/workflows/lint-yaml.yml)
+[![actionlint](https://github.com/M-Gage-Plott42/agentic-github-governance/actions/workflows/lint-actions.yml/badge.svg?branch=main)](https://github.com/M-Gage-Plott42/agentic-github-governance/actions/workflows/lint-actions.yml)
+[![shellcheck](https://github.com/M-Gage-Plott42/agentic-github-governance/actions/workflows/lint-shell.yml/badge.svg?branch=main)](https://github.com/M-Gage-Plott42/agentic-github-governance/actions/workflows/lint-shell.yml)
+[![CodeQL](https://github.com/M-Gage-Plott42/agentic-github-governance/actions/workflows/codeql.yml/badge.svg?branch=main)](https://github.com/M-Gage-Plott42/agentic-github-governance/actions/workflows/codeql.yml)
 
-Opinionated template for AI-assisted development repositories using Codex + GitHub governance defaults:
+Opinionated template for AI-assisted development repositories using agentic
+GitHub governance defaults:
 
 - predictable CI and lint checks,
 - dependency hygiene with Dependabot,
 - security defaults and vulnerability reporting,
 - non-blocking admin bypass for branch rulesets,
-- dual `AGENTS.md` pattern (live + illustrative template).
+- cross-agent instruction pattern with `AGENTS.md`, `CLAUDE.md`, and an
+  illustrative AGENTS template.
 
 ## Harness Engineering Model
 
@@ -64,7 +66,10 @@ agents:
 - `.markdownlint.yaml`
 - `.yamllint.yml`
 - `AGENTS.md`
+- `CLAUDE.md`
 - `CONTRIBUTING.md`
+- `scripts/install_actionlint.sh`
+- `scripts/run_actionlint.sh`
 - `scripts/generate_ruleset_payload.sh`
 - `scripts/smoke_bootstrap_ruleset_payload.sh`
 - `scripts/run_repo_quick_gate.sh`
@@ -86,8 +91,8 @@ agents:
 ## Quickstart
 
 ```bash
-git clone git@github.com:M-Gage-Plott42/codex-github-best-practices.git
-cd codex-github-best-practices
+git clone git@github.com:M-Gage-Plott42/agentic-github-governance.git
+cd agentic-github-governance
 python3 -m venv .venv
 source .venv/bin/activate
 pip install pre-commit ruff yamllint
@@ -144,10 +149,10 @@ yet, because the same endpoint also controls `allowed_actions`, which is a
 broader policy decision than simply flipping SHA enforcement. The live template
 repository now enforces the setting directly at the repository level.
 
-## Git Transport For Codex Sessions
+## Git Transport For Agent Sessions
 
-Prefer SSH remotes for push operations from Codex/non-interactive shells.
-HTTPS pushes can fail on credential prompts in headless environments.
+Prefer SSH remotes for push operations from non-interactive agent shells. HTTPS
+pushes can fail on credential prompts in headless environments.
 
 Use:
 
@@ -215,6 +220,8 @@ bash scripts/smoke_bootstrap_ruleset_payload.sh
 ## AGENTS.md Pattern
 
 - `AGENTS.md` is the live operational contract for this template repository.
+- `CLAUDE.md` imports `AGENTS.md` with Claude-specific notes kept below the
+  import.
 - `docs/AGENTS.example.md` is a reusable starting template for downstream repositories.
 
 ## Optional Operational Patterns

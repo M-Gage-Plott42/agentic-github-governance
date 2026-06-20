@@ -8,7 +8,7 @@ small, portable, and easy to apply in downstream repos.
 1. Read `README.md`, `AGENTS.md`, and `docs/standards.md`.
 2. Keep workflow, script, and docs changes synchronized.
 3. Update `CHANGELOG.md` under `[Unreleased]` for user-visible changes.
-4. Prefer SSH git remotes for push operations in Codex/headless sessions.
+4. Prefer SSH git remotes for push operations in non-interactive agent sessions.
 
 ## Execution Plan Requirement
 
@@ -25,8 +25,8 @@ bash scripts/run_repo_quick_gate.sh
 ruff check .
 yamllint -c .yamllint.yml .
 markdownlint-cli2 "**/*.md"
-actionlint
-shellcheck scripts/bootstrap_repo.sh
+bash scripts/run_actionlint.sh
+shellcheck scripts/*.sh
 bash -n scripts/bootstrap_repo.sh
 bash scripts/smoke_bootstrap_ruleset_payload.sh
 ```

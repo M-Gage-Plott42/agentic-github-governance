@@ -2,7 +2,7 @@
 
 ## Purpose
 
-This repository is a reusable template for Codex + GitHub governance defaults.
+This repository is a reusable template for agentic GitHub governance defaults.
 Prefer changes that improve downstream reliability, security, and clarity.
 
 ## Repository Priorities
@@ -18,7 +18,7 @@ Prefer changes that improve downstream reliability, security, and clarity.
 - When workflow behavior changes, update `README.md` and `CHANGELOG.md` in the same patch.
 - Prefer minimal, auditable diffs over broad refactors.
 - Use pinned GitHub Actions versions in workflows.
-- Prefer SSH Git remotes for push operations in Codex sessions.
+- Prefer SSH Git remotes for push operations in non-interactive agent sessions.
 
 ## Setup Trigger Matrix
 
@@ -77,8 +77,8 @@ Prefer changes that improve downstream reliability, security, and clarity.
   - `ruff check .`
   - `yamllint -c .yamllint.yml .`
   - `markdownlint-cli2 "**/*.md"`
-  - `actionlint`
-  - `shellcheck scripts/bootstrap_repo.sh`
+  - `bash scripts/run_actionlint.sh`
+  - `shellcheck scripts/*.sh`
 - If a check is unavailable locally, state that explicitly in the handoff.
 
 ## Optional Scalability Patterns

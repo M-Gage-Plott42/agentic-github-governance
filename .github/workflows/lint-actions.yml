@@ -23,21 +23,7 @@ jobs:
         uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10  # v6.0.3
 
       - name: Install actionlint
-        run: |
-          set -euo pipefail
-          version="1.7.12"
-          asset="actionlint_${version}_linux_amd64.tar.gz"
-          checksum_file="actionlint_${version}_checksums.txt"
-          base_url="https://github.com/rhysd/actionlint/releases/download/v${version}"
-
-          curl -fsSLO "${base_url}/${asset}"
-          curl -fsSLO "${base_url}/${checksum_file}"
-          grep "  ${asset}$" "${checksum_file}" | sha256sum -c -
-          tar -xzf "${asset}" actionlint
-
-          mkdir -p "${HOME}/.local/bin"
-          install -m 0755 actionlint "${HOME}/.local/bin/actionlint"
-          echo "${HOME}/.local/bin" >> "$GITHUB_PATH"
+        run: bash scripts/install_actionlint.sh
 
       - name: Run actionlint
-        run: actionlint -color
+        run: bash scripts/run_actionlint.sh -color

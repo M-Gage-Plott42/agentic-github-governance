@@ -9,6 +9,10 @@ and this project follows [Semantic Versioning](https://semver.org/spec/v2.0.0.ht
 
 ### Added
 
+- Added shared `scripts/install_actionlint.sh` and `scripts/run_actionlint.sh`
+  helpers so CI and local pre-commit use the same verified `actionlint`
+  release binary.
+- Added `CLAUDE.md` as a thin shim that imports `AGENTS.md` for Claude Code.
 - Added repository-level `AGENTS.md` for live Codex collaboration rules.
 - Added `docs/AGENTS.example.md` as a downstream template.
 - Added `docs/execution-plan-template.md` for structured non-trivial task planning.
@@ -27,6 +31,11 @@ and this project follows [Semantic Versioning](https://semver.org/spec/v2.0.0.ht
 
 ### Changed
 
+- Renamed the template identity toward agentic GitHub governance while keeping
+  tool-specific guidance explicit.
+- Updated the Actions lint workflow and pre-commit hook to use `actionlint`
+  `v1.7.12` from the verified upstream release binary instead of divergent
+  local and CI install paths.
 - Updated CodeQL workflow to use explicit `build-mode: none` for Python and
   GitHub Actions in advanced setup.
 - Pinned `github/codeql-action` workflow references to full commit SHAs.
