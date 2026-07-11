@@ -67,6 +67,8 @@ and this project follows [Semantic Versioning](https://semver.org/spec/v2.0.0.ht
 - Added SSH-first git transport guidance for Codex/headless push workflows.
 - Expanded optional operations guidance with reusable workflow recommendations
   for multi-repo estates.
+- Updated pinned CodeQL action references to v4.36.3 and markdownlint action
+  reference to v24.0.0.
 
 ## [0.1.0] - 2026-02-16
 
