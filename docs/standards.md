@@ -20,6 +20,8 @@ This template consolidates maintainership patterns proven in the following repos
 ## Dependency and Security Defaults
 
 - Dependabot version updates enabled for GitHub Actions and Python (`pip`).
+- CodeQL action updates grouped so all workflow steps advance together in one
+  Dependabot pull request.
 - Dependabot security updates enabled.
 - Private vulnerability reporting enabled.
 - CodeQL advanced workflow enabled for Python and GitHub Actions.

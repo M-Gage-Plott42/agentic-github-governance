@@ -121,6 +121,8 @@ Required-check workflows in this template are hardened to be portable and
 predictable:
 
 - action references are pinned to full commit SHAs,
+- Dependabot groups `github/codeql-action/*` updates so CodeQL workflow steps
+  advance together in one pull request,
 - workflow-level concurrency cancels superseded runs on the same ref,
 - `merge_group` triggers are included so merge queue can reuse the same
   required checks without missing status reports.
