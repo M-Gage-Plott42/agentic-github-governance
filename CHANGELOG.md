@@ -70,6 +70,11 @@ and this project follows [Semantic Versioning](https://semver.org/spec/v2.0.0.ht
 - Updated pinned CodeQL action references to v4.37.0 and markdownlint action
   reference to v24.0.0, and grouped future `github/codeql-action/*` Dependabot
   updates into one pull request.
+- Retired the blanket Dependabot Actions auto-merge workflow so dependency
+  updates remain review-gated.
+- Recorded pull request #26 as a policy-control exception: its legitimate,
+  green grouped CodeQL update auto-merged without review. The update is retained
+  while the automatic merge control is removed.
 
 ## [0.1.0] - 2026-02-16
 
