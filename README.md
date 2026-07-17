@@ -59,7 +59,6 @@ agents:
 - `.github/workflows/lint-shell.yml`
 - `.github/workflows/codeql.yml`
 - `.github/workflows/dependency-review.yml`
-- `.github/workflows/dependabot-auto-merge.yml`
 - `.github/dependency-review-config.yml`
 - `.github/CODEOWNERS`
 - `.pre-commit-config.yaml`
@@ -123,6 +122,8 @@ predictable:
 - action references are pinned to full commit SHAs,
 - Dependabot groups `github/codeql-action/*` updates so CodeQL workflow steps
   advance together in one pull request,
+- Dependabot pull requests remain review-gated; no blanket workflow queues
+  them for automatic merge,
 - workflow-level concurrency cancels superseded runs on the same ref,
 - `merge_group` triggers are included so merge queue can reuse the same
   required checks without missing status reports.

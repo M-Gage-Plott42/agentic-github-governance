@@ -12,7 +12,8 @@ This template consolidates maintainership patterns proven in the following repos
 - Required CI checks with branch rulesets.
 - Admin bypass enabled in rulesets so required checks protect contributors without blocking owner/admin emergency pushes.
 - Wiki and Projects disabled unless intentionally used.
-- Auto-merge enabled for approved update classes.
+- Repository auto-merge may remain available for explicitly approved pull
+  requests, but no workflow automatically queues Dependabot updates for merge.
 - Automatic branch deletion on merge enabled.
 - `CODEOWNERS` for ownership enforcement on critical paths.
 - `CONTRIBUTING.md` for predictable contribution expectations.
@@ -20,6 +21,7 @@ This template consolidates maintainership patterns proven in the following repos
 ## Dependency and Security Defaults
 
 - Dependabot version updates enabled for GitHub Actions and Python (`pip`).
+- Dependabot pull requests require explicit review and merge approval.
 - CodeQL action updates grouped so all workflow steps advance together in one
   Dependabot pull request.
 - Dependabot security updates enabled.
