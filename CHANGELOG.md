@@ -31,6 +31,8 @@ and this project follows [Semantic Versioning](https://semver.org/spec/v2.0.0.ht
 
 ### Changed
 
+- Pinned the Python lint workflow to Ruff 0.15.1 so CI matches pre-commit and
+  does not silently adopt a new lint contract.
 - Renamed the template identity toward agentic GitHub governance while keeping
   tool-specific guidance explicit.
 - Updated the Actions lint workflow and pre-commit hook to use `actionlint`
