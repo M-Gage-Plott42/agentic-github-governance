@@ -42,7 +42,8 @@ This template consolidates maintainership patterns proven in the following repos
 
 ## CI and Quality Defaults
 
-- Python lint (`ruff`).
+- Python lint uses Ruff 0.15.1 in both CI and pre-commit; version upgrades must
+  keep those two enforcement surfaces synchronized.
 - Markdown lint (`markdownlint-cli2`).
 - YAML lint (`yamllint`).
 - GitHub Actions lint (`actionlint`).
