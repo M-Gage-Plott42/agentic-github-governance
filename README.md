@@ -120,6 +120,8 @@ Required-check workflows in this template are hardened to be portable and
 predictable:
 
 - action references are pinned to full commit SHAs,
+- the live template pins both CodeQL workflow steps to the verified
+  `v4.37.3` release commit,
 - Python lint installs Ruff 0.15.1 to match the pinned pre-commit hook; update
   both surfaces together when adopting a newer lint contract,
 - Dependabot groups `github/codeql-action/*` updates so CodeQL workflow steps
