@@ -31,6 +31,8 @@ and this project follows [Semantic Versioning](https://semver.org/spec/v2.0.0.ht
 
 ### Changed
 
+- Updated both CodeQL workflow action pins to the verified `v4.37.3` release
+  commit.
 - Pinned the Python lint workflow to Ruff 0.15.1 so CI matches pre-commit and
   does not silently adopt a new lint contract.
 - Renamed the template identity toward agentic GitHub governance while keeping
