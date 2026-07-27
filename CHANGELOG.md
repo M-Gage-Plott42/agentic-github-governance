@@ -31,6 +31,8 @@ and this project follows [Semantic Versioning](https://semver.org/spec/v2.0.0.ht
 
 ### Changed
 
+- Updated every `actions/checkout` workflow pin to the verified `v7.0.1`
+  release commit.
 - Updated both CodeQL workflow action pins to the verified `v4.37.3` release
   commit.
 - Pinned the Python lint workflow to Ruff 0.15.1 so CI matches pre-commit and
