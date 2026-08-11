@@ -123,7 +123,7 @@ predictable:
 - the live template uses the verified `actions/checkout` `v7.0.1` release
   commit across its required-check workflows,
 - the live template pins both CodeQL workflow steps to the verified
-  `v4.37.3` release commit,
+  `v4.37.6` release commit,
 - Python lint installs Ruff 0.15.1 to match the pinned pre-commit hook; update
   both surfaces together when adopting a newer lint contract,
 - Dependabot groups `github/codeql-action/*` updates so CodeQL workflow steps
