@@ -20,7 +20,9 @@ This template consolidates maintainership patterns proven in the following repos
 
 ## Dependency and Security Defaults
 
-- Dependabot version updates enabled for GitHub Actions and Python (`pip`).
+- Dependabot version updates enabled for GitHub Actions. Add Python (`pip`)
+  monitoring in downstream repositories when a supported dependency manifest
+  exists; this template has no Python dependency manifest.
 - Dependabot pull requests require explicit review and merge approval.
 - CodeQL action updates grouped so all workflow steps advance together in one
   Dependabot pull request.

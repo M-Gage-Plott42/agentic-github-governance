@@ -31,6 +31,10 @@ and this project follows [Semantic Versioning](https://semver.org/spec/v2.0.0.ht
 
 ### Changed
 
+- Removed the empty `pip` Dependabot entry: this template has no Python
+  dependency manifest, and the updater failed with `No files found in /`.
+  GitHub Actions updates and dependency review remain enabled.
+- Updated both CodeQL action pins to the verified `v4.38.0` release commit.
 - Updated every `actions/checkout` workflow pin to the verified `v7.0.1`
   release commit.
 - Updated both CodeQL workflow action pins to the verified `v4.37.6` release
