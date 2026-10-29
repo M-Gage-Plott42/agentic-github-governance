@@ -46,6 +46,8 @@ This template consolidates maintainership patterns proven in the following repos
 
 ## CI and Quality Defaults
 
+- Python and YAML lint use the verified `actions/setup-python` `v7.1.0`
+  release commit with Python 3.12.
 - Python lint uses Ruff 0.15.1 in both CI and pre-commit; version upgrades must
   keep those two enforcement surfaces synchronized.
 - Markdown lint (`markdownlint-cli2`).

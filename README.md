@@ -124,6 +124,8 @@ predictable:
   commit across its required-check workflows,
 - the live template pins both CodeQL workflow steps to the verified
   `v4.38.3` release commit,
+- Python and YAML lint use the verified `actions/setup-python` `v7.1.0`
+  release commit with Python 3.12,
 - Python lint installs Ruff 0.15.1 to match the pinned pre-commit hook; update
   both surfaces together when adopting a newer lint contract,
 - Dependabot groups `github/codeql-action/*` updates so CodeQL workflow steps
