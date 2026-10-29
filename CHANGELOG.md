@@ -31,6 +31,8 @@ and this project follows [Semantic Versioning](https://semver.org/spec/v2.0.0.ht
 
 ### Changed
 
+- Updated Python and YAML lint to the verified `actions/setup-python`
+  `v7.1.0` release commit; both workflows retain Python 3.12.
 - Updated both CodeQL action pins from `v4.38.2` to the verified `v4.38.3`
   release commit and synchronized the current template documentation.
 - Removed the empty `pip` Dependabot entry: this template has no Python
