@@ -29,6 +29,8 @@ This template consolidates maintainership patterns proven in the following repos
 - Dependabot security updates enabled.
 - Private vulnerability reporting enabled.
 - CodeQL advanced workflow enabled for Python and GitHub Actions.
+- The live template pins CodeQL init and analyze to the verified `v4.38.3`
+  release commit.
 - CodeQL default setup disabled when advanced workflow is present.
 - CodeQL checks move to required status checks only after one confirmed green run.
 - Workflow action references pin to full commit SHAs for immutable releases.
